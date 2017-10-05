@@ -19,6 +19,7 @@ var RepoList = React.createClass({
   },
 
   componentDidMount() {
+	//取到属性值之后
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
       error => this.setState({loading: false, error: error}));
@@ -35,6 +36,7 @@ var RepoList = React.createClass({
       var repos = this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
+			//分别显示从api中读取到的 项目名/star数/项目描述
           <li key={index}><a href={repo.html_url}>{repo.name}</a> ({repo.stargazers_count} stars) <br/> {repo.description}</li>
         );
       });
@@ -49,6 +51,7 @@ var RepoList = React.createClass({
 });
 
 ReactDOM.render(
+	//设置api地址
   <RepoList promise={$.getJSON('https://api.github.com/search/repositories?q=javascript&sort=stars')} />,
   document.getElementById('example')
 );

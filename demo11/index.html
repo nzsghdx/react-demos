@@ -18,10 +18,13 @@ var UserGist = React.createClass({
   },
 
   componentDidMount: function() {
+	//Jquery的ajax语法
+	//this.props.source表示要获取的数据的地址
     $.get(this.props.source, function(result) {
       var lastGist = result[0];
       if (this.isMounted()) {
         this.setState({
+			//根据获取到的数据分别设置username和lastGistUrl
           username: lastGist.owner.login,
           lastGistUrl: lastGist.html_url
         });
@@ -39,6 +42,7 @@ var UserGist = React.createClass({
 });
 
 ReactDOM.render(
+	//设置api地址
   <UserGist source="https://api.github.com/users/octocat/gists" />,
   document.getElementById('example')
 );

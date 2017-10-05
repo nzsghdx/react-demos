@@ -9,10 +9,12 @@
     <div id="example"></div>
     <script type="text/babel">
       var Input = React.createClass({
+	  //getInitialState用于设置初始状态
         getInitialState: function() {
           return {value: 'Hello!'};
         },
         handleChange: function(event) {
+			//读取表单的输入内容
           this.setState({value: event.target.value});
         },
         render: function () {
@@ -20,6 +22,7 @@
           return (
             <div>
               <input type="text" value={value} onChange={this.handleChange} />
+			  //读取最终确定的值(value)
               <p>{value}</p>
             </div>
           );

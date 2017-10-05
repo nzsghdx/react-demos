@@ -13,6 +13,8 @@
           return (
             <ol>
               {
+			  //this.props.children表示的是组件中所有的子节点
+			  //React.Children.map用来遍历this.props.children
                 React.Children.map(this.props.children, function (child) {
                   return <li>{child}</li>;
                 })

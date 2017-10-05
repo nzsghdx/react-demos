@@ -8,14 +8,20 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
+	//声明一个组件
       var HelloMessage = React.createClass({
+	  //组件必须有一个render,用于输出组件
         render: function() {
+		//this.props.name 通过设置的属性名获取组件设置的属性值
           return <h1>Hello {this.props.name}</h1>;
         }
       });
-
+	
+		//react的基本结构
       ReactDOM.render(
-        <HelloMessage name="John" />,
+		//设置组件属性名及赋予属性值
+        <HelloMessage name="aaa" />,
+		//输出到example
         document.getElementById('example')
       );
     </script>
