@@ -1,3 +1,11 @@
+## 此项目来自大佬的项目 [react-demos](https://github.com/ruanyf/react-demos)
+
+本人只是在原本的代码上稍加了几句自己所理解的注释,没有修改其他的内容,不知道是不是和什么开源协议不符,暂时不太懂,如果有什么地方搞错了我会以最快的速度更正.
+
+以下是原文 ReadMe.
+
+-----
+
 This is a collection of simple demos of React.js.
 
 These demos are purposely written in a simple and clear style. You will find no difficulty in following them to learn the powerful library.
